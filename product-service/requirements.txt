@@ -1,0 +1,8 @@
+fastapi[standard]==0.139.0
+SQLAlchemy==2.0.51
+asyncpg==0.31.0
+pydantic-settings==2.14.2
+redis==5.2.1
+PyJWT==2.8.0
+greenlet==3.5.3
+python-dotenv==1.2.2
