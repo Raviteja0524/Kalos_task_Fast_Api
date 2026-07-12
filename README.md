@@ -125,24 +125,6 @@ Then log in again — the role is embedded in the token, so a fresh token is nee
 
 ---
 
-## Running a service without Docker (optional)
-
-Useful for debugging with a local interpreter. You'll need Python 3.13 and a
-local Redis (`brew install redis && brew services start redis`).
-
-```bash
-cd auth-service                    # or product-service
-python3 -m venv .venv && source .venv/bin/activate
-pip install -r requirements.txt
-cp .env.example .env               # edit: Postgres user + shared JWT_SECRET_KEY
-uvicorn app.main:app --port 8001   # product-service uses --port 8002
-```
-
-The service-level `.env` points at `localhost` (not `host.docker.internal`)
-since nothing is inside a container in this mode.
-
----
-
 ## Project structure
 
 ```
